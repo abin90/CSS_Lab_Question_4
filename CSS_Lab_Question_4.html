@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+/*table styling starts here*/		
+		.center{
+			margin: auto;
+		}
+		table{
+			border-collapse: collapse;
+			width: 100%;
+			margin-right: 8px;
+			margin-left: 8px;
+		}
+		table,th,td{
+			border: 2px solid #000;
+			padding: 2px 4px;
+		}
+		th,td{
+			text-align: left;
+		}
+/*glyphicon icons color*/
+		#eye{
+			color: blue;
+		}
+		#pencil{
+			color: orange;
+		}
+		#trash{
+			color: red;
+		}
+		.fa{
+			color: black;
+			font-size: 15px;
+		}
+/*Table label styling*/		
+		.label-1{
+			font-size: 25px;
+			text-align: center;
+			display:block;
+			font-family: serif;
+			font-weight: 300;
+		}
+		.label-2{
+			float: left;
+			margin-left: 8px;
+			margin-top: 8px;
+			font-weight: 300;
+		}
+/*pagination styling starts here*/
+		.pagination{
+			display: inline-block;
+			float: right;
+		}
+		.pagination a{
+			color: black;
+			padding: 10px;
+			text-decoration: none;
+			background-color: lightgrey;
+			border: 1px solid lightgrey;
+		}
+		.pagination a.active{
+			color: black;
+			background-color: skyblue;
+		}
+		.pagination a:hover:not(.active){
+			background-color: lightcoral;
+		}
+		input[type=text]{
+			float: right;
+			margin-top: 8px;
+			margin-right: 8px;
+		}
+		#circle{
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label class="label-2" for="number">show
+			<select id="number">
+				<option value="5" selected>5</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+				<option value="25">25</option>
+			</select>
+		entries</label>
+		<input type="text" name="Search" placeholder="search">
+	</form>
+	<label class="label-1">Customer <b>Details</b></label>
+	<table class="center">
+		<tr>
+			<th>#</th>
+			<th>Name&nbsp;<i class="fa fa-sort"></th>
+			<th>Address</th>
+			<th>City&nbsp;<i class="fa fa-sort"</th>
+			<th>Pincode</th>
+			<th>Country&nbsp;<i class="fa fa-sort"</th>
+			<th>Actions</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Thomas Hardy</td>
+			<td>89 Chiarsco Rd.</td>
+			<td>Portland</td>
+			<td>91219</td>
+			<td>USA</td>
+			<td><i class="glyphicon glyphicon-eye-open" id="eye">
+				<i class="glyphicon glyphicon-pencil" id="pencil">
+				<i class="glyphicon glyphicon-trash" id="trash"></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Maria Anders</td>
+			<td>Obere Str.57</td>
+			<td>Berlin</td>
+			<td>12209</td>
+			<td>Germany</td>
+			<td><i class="glyphicon glyphicon-eye-open" id="eye">
+				<i class="glyphicon glyphicon-pencil" id="pencil">
+				<i class="glyphicon glyphicon-trash" id="trash"></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Fran Wilson</td>
+			<td>C/Araquil,67</td>
+			<td>Madrid</td>
+			<td>28023</td>
+			<td>Spain</td>
+			<td><i class="glyphicon glyphicon-eye-open" id="eye">
+				<i class="glyphicon glyphicon-pencil" id="pencil">
+				<i class="glyphicon glyphicon-trash" id="trash"></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Dominic Perrier</td>
+			<td>25,rue Lauriston</td>
+			<td>Paris</td>
+			<td>75016</td>
+			<td>France</td>
+			<td><i class="glyphicon glyphicon-eye-open" id="eye">
+				<i class="glyphicon glyphicon-pencil" id="pencil">
+				<i class="glyphicon glyphicon-trash" id="trash"></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Martin Blank</td>
+			<td>Via Monteblanco 34</td>
+			<td>Turin</td>
+			<td>10100</td>
+			<td>Italy</td>
+			<td><i class="glyphicon glyphicon-eye-open" id="eye">
+				<i class="glyphicon glyphicon-pencil" id="pencil">
+				<i class="glyphicon glyphicon-trash" id="trash"></td>
+		</tr>
+	</table><br>
+	<label class="label-2">Showing <b>5</b> out of <b>25</b> entries</label>
+	<div class="pagination">
+		  <a href="#">Previous</a>
+		  <a href="#" id="circle">1</a>
+		  <a href="#" id="circle">2</a>
+		  <a class="active" href="#" id="circle">3</a>
+		  <a href="#" id="circle">4</a>
+		  <a href="#" id="circle">5</a>
+		  <a href="#">Next</a>
+	</div>
+
+</body>
+</html>
